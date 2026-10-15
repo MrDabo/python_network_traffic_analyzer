@@ -1,0 +1,111 @@
+
+{
+  "network_name": "OfficeNet",
+  "description": "Simulated network traffic for practice",
+  "records": [
+    {
+      "id": 1,
+      "timestamp": "2026-10-15T18:00:00Z",
+      "src_ip": "192.168.1.10",
+      "dst_ip": "93.184.216.34",
+      "src_port": 51522,
+      "dst_port": 443,
+      "protocol": "TCP",
+      "bytes": 18420,
+      "packets": 42,
+      "duration": 1.24,
+      "action": "allowed"
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-10-15T18:00:10Z",
+      "src_ip": "192.168.1.15",
+      "dst_ip": "192.168.1.1",
+      "src_port": 53010,
+      "dst_port": 53,
+      "protocol": "UDP",
+      "bytes": 88,
+      "packets": 1,
+      "duration": 0.02,
+      "action": "allowed"
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-10-15T18:00:20Z",
+      "src_ip": "192.168.1.20",
+      "dst_ip": "192.168.1.30",
+      "src_port": 49800,
+      "dst_port": 445,
+      "protocol": "TCP",
+      "bytes": 824000,
+      "packets": 740,
+      "duration": 8.4,
+      "action": "allowed"
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-10-15T18:00:30Z",
+      "src_ip": "192.168.1.45",
+      "dst_ip": "192.168.1.1",
+      "src_port": 60101,
+      "dst_port": 23,
+      "protocol": "TCP",
+      "bytes": 60,
+      "packets": 1,
+      "duration": 0.01,
+      "action": "blocked"
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-10-15T18:00:40Z",
+      "src_ip": "192.168.1.45",
+      "dst_ip": "192.168.1.1",
+      "src_port": 60102,
+      "dst_port": 22,
+      "protocol": "TCP",
+      "bytes": 60,
+      "packets": 1,
+      "duration": 0.01,
+      "action": "blocked"
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-10-15T18:00:50Z",
+      "src_ip": "192.168.1.30",
+      "dst_ip": "198.51.100.80",
+      "src_port": 55000,
+      "dst_port": 443,
+      "protocol": "TCP",
+      "bytes": 18500000,
+      "packets": 15200,
+      "duration": 95.0,
+      "action": "allowed"
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-10-15T18:01:00Z",
+      "src_ip": "192.168.1.20",
+      "dst_ip": "203.0.113.77",
+      "src_port": 55100,
+      "dst_port": 4444,
+      "protocol": "TCP",
+      "bytes": 9600,
+      "packets": 120,
+      "duration": 7.5,
+      "action": "allowed"
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-10-15T18:01:10Z",
+      "src_ip": "192.168.1.10",
+      "dst_ip": "151.101.1.69",
+      "src_port": 51550,
+      "dst_port": 443,
+      "protocol": "TCP",
+      "bytes": 26400,
+      "packets": 58,
+      "duration": 1.6,
+      "action": "allowed"
+    }
+  ]
+}
