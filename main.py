@@ -27,7 +27,7 @@ def analyse_traffic(traffic: dict):
         'repeated_blocked connections': []
     }
     blocked = []
-    if traffic.get('records') is not None and len(traffic.get('records')): return traffic_dict
+    if traffic.get('records') is None and not len(traffic.get('records')): return traffic_dict
     for record in traffic.get('records'):
         protocol = record['protocol'].lower()
         if traffic_dict['protocols'].get(protocol) is None:
@@ -44,13 +44,13 @@ def analyse_traffic(traffic: dict):
         if record['action'] == 'allowed':
             traffic_dict['allowed'] += 1
         else:
-            traffic_dict['bloced'] += 1 
+            traffic_dict['blocked'] += 1 
             blocked.append(record)
         if record['bytes'] > traffic_dict['hb']:
             traffic_dict['hb'] = record['bytes']
             traffic_dict['hb_ip'] = record['src_ip']
     for record in blocked:
-        count = len(filter(lambda x: x['src_ip'] == record['src_ip'] and x['dst_ip'] == record['dst_ip']), blocked)
+        count = len(filter(lambda x: x['src_ip'] == record['src_ip'] and x['dst_ip'] == record['dst_ip'], blocked))
         if count > 2:
             is_in = False
             for x in traffic_dict['repeated_blocked connections']:
